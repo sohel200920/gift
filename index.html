@@ -1,45 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secret</title>
-    <style>
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f0f8ff;
-          font-family: Arial, sans-serif;
-        }
-        button {
-          background-color: #ff007f;
-          color: white;
-          border: none;
-          padding: 15px 30px;
-          font-size: 18px;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: background-color 0.3s, transform 0.2s;
-        }
-        button:hover {
-          background-color: #ff4da6;
-          transform: scale(1.05);
-        }
-      </style>
-    </head>
-    <body>
-      <button href="/gift.html" onclick="sendNotification()">Yes</button>
-    
-      <script>
-        function sendNotification() {
-          fetch('https://hooks.zapier.com/hooks/catch/21554168/2f79eiy/')
-            .then(response => {
-             window.location.href = "gift.html"
-            })
-            .catch(error => console.log(error));
-        }
-      </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffccf2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      color: #1b1b1b;
+      font-size: 28px;
+      font-weight: bold;
+      max-width: 500px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .yes-button {
+      background-color: #ff007f;
+      color: white;
+      border: none;
+      width: 100px;
+      height: 90px;
+      font-size: 18px;
+      cursor: pointer;
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      clip-path: polygon(50% 0%,
+          85% 15%,
+          100% 50%,
+          85% 85%,
+          50% 100%,
+          15% 85%,
+          0% 50%,
+          15% 15%);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .yes-button:hover {
+      background-color: #ff4da6;
+      transform: scale(1.05);
+    }
+
+    .no-button {
+      background-color: #ff0000;
+      color: rgb(255, 255, 255);
+      border: none;
+      width: 100px;
+      height: 90px;
+      font-size: 18px;
+      cursor: pointer;
+      position: relative;
+      text-align: center;
+      display: inline-block;
+      clip-path: polygon(50% 0%,
+          85% 15%,
+          100% 50%,
+          85% 85%,
+          50% 100%,
+          15% 85%,
+          0% 50%,
+          15% 15%);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .no-button:hover {
+      background-color: #ff4da6;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>मुझे तुमसे ये कहने में बहुत वक्त लग गया, लेकिन आज मैं पूरी सच्चाई के साथ कह रहा हूँ... I Love You MARIYA ❤️</h2>
+    <button class="yes-button" onclick="sendNotification()">YES</button>
+    <button class="no-button" onclick="faltu()">NO</button>
+  </div>
+
+  <script>
+    function sendNotification() {
+      fetch('https://hooks.zapier.com/hooks/catch/21554168/2f79eiy/')
+        .then(response => {
+          window.location.href = "gift.html";
+        })
+        .catch(error => console.log(error));
+    }
+
+    function faltu() {
+      window.location.href = "faltu.html";
+    }
+  </script>
 </body>
+
 </html>
