@@ -1,7 +1,7 @@
 function changeGift() {
   const giftDiv = document.getElementById("gift");
   const gifts = {
-    1: { emoji: "🌹", text: "I LOVE YOU MARIYA" },
+    1: { emoji: "🌹", text: "HAPPY BIRTHDAY " },
   };
 
   const days = Object.keys(gifts);
